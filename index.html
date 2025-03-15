@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Campaign</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      color: #222;
+    }
+    .image-container img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+    .emails, .messages {
+      margin-bottom: 30px;
+    }
+    textarea {
+      width: 100%;
+      height: 100px;
+      margin-bottom: 10px;
+      padding: 10px;
+      font-size: 14px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      resize: none;
+    }
+    button.copy-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+    button.copy-btn:hover {
+      background-color: #0056b3;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 14px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Nekontaktuokit šių asmenų ir nesiųskit jiems žemiau pateiktų žinučių </h1>
+
+    <!-- IMAGE -->
+    <div class="image-container">
+     <a href="https://ibb.co/bgPK8j89"><img src="https://i.ibb.co/Lz8Z2D27/SCR-20250315-ldio.png" alt="SCR-20250315-ldio" border="0" /></a>
+    </div>
+
+    <!-- EMAILS SECTION -->
+    <div class="emails">
+      <h2>Email List</h2>
+      <textarea id="emailList" readonly>
+Arturas.Skardzius@Irs.It
+aidas.gedvilas@Irs.lt
+vytautas.jucius@Irs.lt
+valius.azuolas@Irs.lt
+tomas.domarkas@Irs.It
+robert.puchovic@Irs.lt
+rimas.jankunas@Irs.lt
+remigijus.zemaitaitis@Irs.lt
+petras.dargis@Irs.lt
+martynas.gedvilas@Irs.It
+lina.sukyte@Irs.It
+ignas.vegele@Irs.It
+eimantas.kirkutis@Irs.lt
+daiva.zebeliene@Irs.lt
+dainoras.bradauskas@Irs.lt
+dainius.varnas@Irs.lt
+ceslav.olsevski@Irs.lt
+bronis.rope@Irs.lt
+      </textarea>
+      <button class="copy-btn" onclick="copyEmails()">Copy All Emails</button>
+    </div>
+
+    <!-- MESSAGES SECTION -->
+    <div class="messages">
+      <h2>Sample Messages</h2>
+
+      <textarea id="message1" readonly>
+Gerbiamas Seimo nary,
+Jūsų balsavimas prieš sankcijų Rusijai ir Baltarusijai pratęsimą kelia didelį nerimą. Ar tikrai manote, kad toks sprendimas atitinka Jūsų duotą Seimo nario priesaiką saugoti Lietuvos valstybingumą ir nepriklausomybę? Tyliai stebėti agresoriaus stiprėjimą reiškia silpninti mūsų saugumą. Tikiuosi, suvokiate, kokią žalą tai daro mūsų valstybei ir jos ateičiai.
+      </textarea>
+      <button class="copy-btn" onclick="copyMessage('message1')">Copy Message 1</button>
+
+      <textarea id="message2" readonly>
+Seimo nary,
+Balsuodamas prieš sankcijų Rusijai ir Baltarusijai pratęsimą, pasirinkote sprendimą, kuris prieštarauja Lietuvos interesams. Ar tai neprieštarauja Jūsų duotai Seimo nario priesaikai ginti mūsų valstybę? Tokie veiksmai tiesiogiai kenkia mūsų nacionaliniam saugumui ir stiprina agresoriaus pozicijas Europoje.
+      </textarea>
+      <button class="copy-btn" onclick="copyMessage('message2')">Copy Message 2</button>
+
+      <textarea id="message3" readonly>
+Gerbiamas(-a),
+Jūsų sprendimas nepratęsti sankcijų Rusijai ir Baltarusijai stebina ir liūdina. Ar tikrai tai suderinama su Jūsų, kaip Seimo nario, pareiga ir priesaika saugoti Lietuvos nepriklausomybę? Tokiais balsavimais siunčiama pavojinga žinutė tiek mūsų sąjungininkams, tiek priešams.
+      </textarea>
+      <button class="copy-btn" onclick="copyMessage('message3')">Copy Message 3</button>
+ <textarea id="message3" readonly>
+Seimo nary,
+Kaip žmogus, kuris privalo ginti Lietuvos laisvę ir nepriklausomybę, ar tikrai manote, kad balsuodamas prieš sankcijų Rusijai ir Baltarusijai pratęsimą laikėtės priesaikos? Tokie veiksmai kenkia mūsų valstybės saugumui ir kelia klausimą dėl tikrųjų vertybių, kurioms tarnaujate.
+      </textarea>
+      <button class="copy-btn" onclick="copyMessage('message3')">Copy Message 4</button>
+      <textarea id="message3" readonly>
+Seimo nary,
+Jūsų balsavimas prieš sankcijų agresoriaus Rusijos režimui pratęsimą smarkiai kenkia Lietuvos ir Europos saugumui. Ar šis sprendimas dera su priesaika, kuria įsipareigojote ginti mūsų valstybės nepriklausomybę ir žmonių gerovę? Tokiais veiksmais silpninate mūsų valstybę kritiniu laikotarpiu.
+      </textarea>
+      <button class="copy-btn" onclick="copyMessage('message3')">Copy Message 5</button>
+      <textarea id="message3" readonly>
+Gerbiamasis,
+Jūsų balsavimas prieš sankcijų agresorei Rusijai ir Baltarusijai pratęsimą kelia pagrįstą klausimą – ar dar jaučiatės įsipareigojęs priesaikai, kurią davėte Lietuvos žmonėms? Tokie sprendimai silpnina valstybę ir stiprina tuos, kurie siekia mūsų nepriklausomybės sunaikinimo.
+      </textarea>
+      <button class="copy-btn" onclick="copyMessage('message3')">Copy Message 6</button>
+      <textarea id="message3" readonly>
+Seimo nary,
+Nusivylęs stebiu Jūsų sprendimą balsuoti prieš sankcijų Rusijai ir Baltarusijai pratęsimą. Kaip toks balsavimas suderinamas su Jūsų pareiga ginti Lietuvos valstybės vientisumą ir nepriklausomybę? Tai sprendimas, kuris silpnina mūsų gynybines galias ir kelia grėsmę mūsų ateičiai.
+      </textarea>
+      <button class="copy-btn" onclick="copyMessage('message3')">Copy Message 7</button>
+      <textarea id="message3" readonly>
+Gerbiamas(-a) Seimo nary,
+Kai priesaikoje įsipareigojote ginti Lietuvos valstybę, ar įsivaizdavote, kad kada nors balsuosite prieš sankcijas agresoriui, kuris kėsinasi į taiką Europoje? Jūsų sprendimas žaloja mūsų saugumą ir stiprina agresoriaus pozicijas.
+      </textarea>
+      <button class="copy-btn" onclick="copyMessage('message3')">Copy Message 8</button><textarea id="message3" readonly>
+Seimo nary,
+Negaliu suprasti, kaip Jūsų sprendimas balsuoti prieš sankcijų pratęsimą Rusijai ir Baltarusijai gali būti suderinamas su Jūsų priesaika ginti Lietuvos nepriklausomybę. Ar esate pasiruošęs prisiimti atsakomybę už pasekmes, kurios gali kilti dėl tokio sprendimo? Tai kelia grėsmę mūsų šalies saugumui.
+      </textarea>
+      <button class="copy-btn" onclick="copyMessage('message3')">Copy Message 9</button><textarea id="message3" readonly>
+Gerbiamas Seimo nary,
+Balsuodamas prieš sankcijų Rusijai ir Baltarusijai pratęsimą, nusprendėte žengti žingsnį, kuris prieštarauja mūsų nacionalinio saugumo interesams. Ar nemanote, kad tai gali būti laikoma Jūsų priesaikos sulaužymu? Tikiuosi, suvokiate atsakomybę, kurią prisiimate tokiais sprendimais.
+      </textarea>
+      <button class="copy-btn" onclick="copyMessage('message3')">Copy Message 10</button>
+      <!-- Add more messages if you like! -->
+    </div>
+
+  
+  </div>
+
+  <script>
+    function copyEmails() {
+      const emailField = document.getElementById("emailList");
+      emailField.select();
+      emailField.setSelectionRange(0, 99999);
+      document.execCommand("copy");
+      alert("Emails copied to clipboard!");
+    }
+
+    function copyMessage(id) {
+      const messageField = document.getElementById(id);
+      messageField.select();
+      messageField.setSelectionRange(0, 99999);
+      document.execCommand("copy");
+      alert("Message copied to clipboard!");
+    }
+  </script>
+</body>
+</html>
